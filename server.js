@@ -24,38 +24,7 @@ app.post('/addEvent', async (req, res) => {
   const extraInfo = currentDate.toISOString();
 
   try {
-    // const response = await notion.pages.create({
-    //   parent: { database_id: databaseID },
-    //   properties: {
-    //     Name: {
-    //       title: [
-    //         {
-    //           text: {
-    //             content: name
-    //           }
-    //         }
-    //       ]
-    //     },
-    //     // "Calender Link": {
-    //     //   rich_text: [
-    //     //     {
-    //     //       text: {
-    //     //         content: phoneNumber
-    //     //       }
-    //     //     }
-    //     //   ]
-    //     // },
-    //     Date: {
-    //       date: {
-    //         start: extraInfo
-    //       }
-    //     }
-    //   }
-    // });
-
-    // console.log(name, phoneNumber, extraInfo);
-
-    // res.send("Received");
+ 
 
     const { summary, description, location, startTime, endTime } = req.body;
 
@@ -99,11 +68,7 @@ app.post('/addEvent', async (req, res) => {
               start: endTime
             }
           }
-        //   Date: {
-        //     date: {
-        //       start: extraInfo
-        //     }
-        //   }
+
         }
       });
   
